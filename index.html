@@ -4,23 +4,105 @@
 <head>
 	<title>Armin Van Buuren</title>
 	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="">
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="Home.css">
+	<link rel="stylesheet" type="text/css" href="menu.css">
+	
 </head>
 
 <body>
-	<header>
-		<img src="img/armin_logo.png">
+	<div id="layout">
+		<header class="pure-g">
+	  		<div class="pure-u-sm-1-3 pure-u-md-1-3 pure-u-lg-1-3">
+			
+			</div>
+	  		<div class="pure-u-sm-1-3 pure-u-md-1-3 pure-u-lg-1-3">
+			<img src="img/armin_logo.png" >
+			</div>
+			<div class="pure-u-sm-1-3 pure-u-md-1-3 pure-u-lg-1-3">
+		
+			</div>
+		</header>	
+			<a href="#menu" id="menuLink" class="menu-link">
+		        <!-- Hamburger icon -->
+		        <span></span>
+	    	</a>
+			<nav id="menu">
+				<div class="pure-menu" >
+					<ul class="pure-menu-list">
+						<a class="pure-menu-heading" href="#">Van Buuren</a>
+						<li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+						<li class="pure-menu-item"><a href="#" class="pure-menu-link">Videos</a></li>
+						<li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+						<li class="pure-menu-item"><a href="#" class="pure-menu-link">Buy Tickets</a></li>
+					</ul>
+				</div>		
+			</nav>
+		
 
-		<nav>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Videos</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Buy Tickets</a></li>
-			</ul>
-		</nav>
-	</header>
+		<section class="pure-g">
+			<div class="pure-u-sm-1 pure-u-md-1 pure-u-lg-1-3" >
+				<div class="blue">
+					<p>Phasellus nibh nulla, tristique vitae euismod ac, vestibulum ac augue. Nullam pretium magna mauris, id interdum ligula porttitor nec. Mauris feugiat arcu sit amet velit pharetra viverra. Integer ac ex scelerisque, aliquet ex id, aliquam ante. Ut consequat, sem et maximus sollicitudin, sapien sapien commodo enim, ut egestas nisl nisi eu felis. Etiam ac vehicula felis, eget pretium neque. 
+					vestibulum ac augue. Nullam pretium magna mauris, id interdum ligula porttitor nec. Mauris feugiat arcu sit amet velit pharetra viverra. Integer ac ex scelerisque, aliquet ex id, aliquam ante. Ut consequat, sem et maximus sollicitudin, sapien sapien commodo enim, ut egestas nisl nisi eu felis. Etiam ac vehicula felis, eget pretium neque
+					vestibulum ac augue. Nullam pretium magna mauris, id interdum ligula porttitor nec. Mauris feugiat arcu sit amet velit pharetra viverra. Integer ac ex scelerisque, aliquet ex id, aliquam ante. Ut consequat, sem et maximus sollicitudin, sapien sapien commodo enim, ut egestas nisl nisi eu felis. Etiam ac vehicula felis, eget pretium neque
+					Donec non dolor ut lacus pulvinar sagittis</p>
+				</div>	
+			</div>
+			<div class="pure-u-sm-1 pure-u-md-1 pure-u-lg-1-3">
 
+			</div>
+			<div class="pure-u-sm-1 pure-u-md-1 pure-u-lg-1-3">
+				<div class="blue">
+					<p>orem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac sollicitudin sem. Aenean rhoncus orci eget mi placerat, eu tincidunt est aliquet. Vestibulum pretium porta nunc. Donec ultrices, justo sodales mattis scelerisque, sem sem pretium,ut egestas nisl nisi eu felis. Etiam ac vehicula felis, eget pretium neque. Donec non 
+					dolor ut lacus pulvinar sagittis Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+		</section>
+	</div>	
+	
+		<script type="text/javascript">
+			(function (window, document) {
+
+		    var layout   = document.getElementById('layout'),
+		        menu     = document.getElementById('menu'),
+		        menuLink = document.getElementById('menuLink');
+
+		    function toggleClass(element, className) {
+		        var classes = element.className.split(/\s+/),
+		            length = classes.length,
+		            i = 0;
+
+		        for(; i < length; i++) {
+		          if (classes[i] === className) {
+		            classes.splice(i, 1);
+		            break;
+		          }
+		        }
+		        // The className is not found
+		        if (length === classes.length) {
+		            classes.push(className);
+		        }
+
+		        element.className = classes.join(' ');
+		    }
+
+		    menuLink.onclick = function (e) {
+		        var active = 'active';
+
+		        e.preventDefault();
+		        toggleClass(layout, active);
+		        toggleClass(menu, active);
+		        toggleClass(menuLink, active);
+		    };
+
+			}(this, this.document));
+		</script>
 </body>
